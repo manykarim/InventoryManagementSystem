@@ -53,7 +53,11 @@ public class LoginPage extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         loginButton = new javax.swing.JButton();
         clearButton = new javax.swing.JButton();
-
+        jComboBox1.setName("userType");
+        loginButton.setName("login");
+        clearButton.setName("clear");
+        userText.setName("username");
+        passText.setName("password");
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Login");
         setBackground(new java.awt.Color(102, 102, 102));
