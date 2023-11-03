@@ -15,6 +15,8 @@ COPY client.cnf /etc/mysql/mysql.conf.d/client.cnf
 
 COPY mysql-bashrc-launch.sh /etc/mysql/mysql-bashrc-launch.sh
 
+RUN echo "/etc/mysql/mysql-bashrc-launch.sh" >> /home/gitpod/.bashrc.d/100-mysql-launch
+
 USER gitpod
 
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
