@@ -1,2 +1,10 @@
 image:
-    file: .gitpod.Dockerfile
+    file: gitpod/workspace-full-vnc
+
+tasks:
+  - name: InventoryManagement
+    init: |
+      docker run --restart always -d --name=mysql -p 127.0.0.1:3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:8
+    command: |
+      docker ps
+      gp ports await 3306
