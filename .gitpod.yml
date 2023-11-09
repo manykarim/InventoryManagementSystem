@@ -4,6 +4,9 @@ tasks:
   - name: InventoryManagement
     init: |
       docker run --restart always -d --name=mysql -p 127.0.0.1:3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:8
+      /home/gitpod/.sdkman/bin/sdkman-init.sh
+      sdk install java 17.0.3-ms
+      sdk default java 17.0.3-ms
     command: |
       docker ps
       gp ports await 3306
